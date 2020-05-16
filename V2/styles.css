@@ -1,0 +1,150 @@
+/*
+Author: Kobi Rogers
+Date: 4-28-20
+
+Color palette generated at Coolors:
+https://coolors.co/ebf5ee-93b7be-bdd4e7-bfc0c0-8693ab
+
+UNUSED ELEMENTS:
+M3LO1: Reset stylesheets allow line height and other generic elements to be reset before loading the browser page. I have not found a use for them yet, since I have not messed with any of that.
+M3LO3: I am still working on this one. Clearing the float allows elements to float on either side of the element that is clearing it. clear: left; for instance allows something to float on the left but not the right.
+M3LO8A and M3LO8B: Absolute = Positioned relative to nearest ancestor, not the viewport. Relative = Positioned relative to its normal position. Other content won't be messed with.
+M3LO10: I don't have use for overflow, as there is not enough text on my website yet for that to be needed. This allows for text to be clipped or scrolled through or many other options.
+
+M4LO2: I have a banner, that could be seen as a background image, but I am not going to use one quite yet. I still have to find one that I like. I'm going to use it as decoration on the borders of the page.
+M4LO3: I don't want rounded corners. I am going to be using square shapes.
+M4LO5: Text shadowing takes the HTML text and repositions it and changes its color, to make it look like a shadow.
+M4LO7: I may have to use image maps in order for the icons of social media to be able to have like a blur effect when I hover over them. I'm not sure though...
+*/
+
+/* EXTERNAL FONTS LINKS */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+/* Basic Styling */
+body {
+  /*M4LO4: Gradient usage*/
+  background: rgb(255,255,255);
+  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,241,255,0.25) 0%, rgba(255,255,255,0.75) 30%, rgba(255,255,255,0.75) 70%, rgba(0,241,255,0.25) 100%); /*M3LO11: -webkit- prefix for android and chrome*/
+  background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,241,255,0.25) 0%, rgba(255,255,255,0.75) 30%, rgba(255,255,255,0.75) 70%, rgba(0,241,255,0.25) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(0,241,255,0.25) 0%, rgba(255,255,255,0.75) 30%, rgba(255,255,255,0.75) 70%, rgba(0,241,255,0.25) 100%);
+
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+h1 {
+  margin: 0.5em;
+  text-align: center;
+
+  font-family: "Noto Serif", serif;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0.5em;
+  text-align: left;
+
+  font-family: "Noto Serif", serif;
+}
+
+.content-box {
+  background: white;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 70em;
+
+  margin: auto;
+}
+
+/* Heading and NAVBAR */
+#banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfc0c0;
+  width: 60em;
+  height: 2.5em;
+}
+
+.nav_link {
+  margin: 2.5em;
+}
+
+/* Content */
+.inner-content {
+  display: grid; /*M3LO6: Grid display. This organizes my content into a stacked grid on my page.*/
+  grid-row-gap: 2em;
+}
+
+.grid-item {
+  width: 60em;
+  text-align: center;
+}
+
+.social-icon { /*M4LO8: I am using a transformation here to keep all the icons the same size.*/
+  padding: 2%;
+  margin: 3%;
+  width: 3em;
+}
+
+#spotify-tracks {
+  float: center; /*M3LO2: Floating element! This is floating center in the box. There is no text to be wrapped around it, otherwise the float would allow text to do that.*/
+  margin: 0;
+}
+
+#box-1 {
+  text-align: left;
+}
+
+/* Footer Styling */
+footer {
+  position: fixed; /*M3LO9: Fixed positioning. Allows the footer to stay stuck to the bottom of the screen. */
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60em;
+  height: 3em;
+  background-color: #bfc0c0;
+}
+
+footer p {
+  margin-left: 3em;
+  margin-right: 3em;
+
+  font-size: 12px;
+}

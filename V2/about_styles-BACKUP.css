@@ -48,14 +48,14 @@ a:hover {
 
 /* M2LO5*/
 h1 {
-  margin: 10px;
+  margin: 0.5em;
   text-align: center;
 
   font-family: "Noto Serif", serif;
 }
 h2 {
   font-size: 20px;
-  margin: 10px;
+  margin: 0.5em;
   text-align: left;
 
   font-family: "Noto Serif", serif;
@@ -90,12 +90,12 @@ h2 {
   align-items: center;
   background-color: #bfc0c0; /* M2LO15: Colors are used quite a bit here*/
   width: 60em;
-  height: 40px
+  height: 3em
 }
 
 /* M2LO6: Class Selector*/
 .nav_link {
-  margin: 50px;
+  margin: 2.5em;
 }
 
 /* Content */
@@ -107,13 +107,13 @@ footer {
   justify-content: center;
   align-items: center;
   width: 60em;
-  height: 40px;
+  height: 3em;
   background-color: #bfc0c0;
 }
 /* M2LO3: This is a case of inheritence; All p children within the footer parent are affected.*/
 footer p {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 3em;
+  margin-right: 3em;
 
   font-size: 12px;
 }

@@ -1,12 +1,6 @@
 /*
 Author: Kobi Rogers
 Date: 4-28-20
-
-M2LO14: CSS can change text elements by giving them color, different hover effects, and different positions on the screen.
-M2LO12: As in the case of the banner on the page, CSS changes the position of this element on the page as a whole. This is also seen with the flexboxes below.
-$$$ M2LO14: Progressive enhancement is the idea that you design for a smaller device and progress your website's content forward as the device grows bigger; Content-first design for mobile vs. pretty looking for desktop.
-I am not fully sure how to tackle this problem, as I only really have a desktop that I can use to test everything. I am not sure if using percentages and "em" units is progressive, but yeah.
-Flexboxes may also be considered progressive enhancement, or mobile-friendly, or both...
 */
 
 Color palette generated at Coolors:
@@ -35,27 +29,32 @@ ul {
   padding: 0;
   font-size: 20px;
 }
-/* M2LO5*/
+
 a {
   text-decoration: none;
   color: black;
 }
 
-/* M2LO11: Selects the hover attribute of the links*/
+.inner-content li {
+  margin: 2%;
+  list-style-type: circle;
+  font-size: 14px;
+  width: 60em;
+}
+
 a:hover {
   color: white;
 }
 
-/* M2LO5*/
 h1 {
-  margin: 10px;
+  margin: 0.5em;
   text-align: center;
 
   font-family: "Noto Serif", serif;
 }
 h2 {
   font-size: 20px;
-  margin: 10px;
+  margin: 0.5em;
   text-align: left;
 
   font-family: "Noto Serif", serif;
@@ -71,12 +70,7 @@ h2 {
   margin: auto;
 }
 
-.inner-content {
-  align-items: left;
-}
-
-/* Heading */
-/* M2LO6: ID Selector*/
+/* Heading and NAVBAR */
 #banner {
   display: block;
   margin-left: auto;
@@ -88,32 +82,55 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #bfc0c0; /* M2LO15: Colors are used quite a bit here*/
+  background-color: #bfc0c0;
   width: 60em;
-  height: 40px
+  height: 2.5em;
 }
 
-/* M2LO6: Class Selector*/
 .nav_link {
-  margin: 50px;
+  margin: 2.5em;
 }
 
 /* Content */
+.inner-content {
+  display: grid;
+  grid-row-gap: 2em;
+}
 
+.grid-item {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60em;
+}
+
+.feat-add {
+  background-color: #a6ffc2;
+}
+
+.feat-rmv {
+  background-color: #ff5252;
+}
+
+.feat-think {
+  background-color: #a6fffc;
+}
 
 /* Footer Styling */
 footer {
+  position: fixed;
+  bottom: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60em;
-  height: 40px;
+  height: 3em;
   background-color: #bfc0c0;
 }
-/* M2LO3: This is a case of inheritence; All p children within the footer parent are affected.*/
+
 footer p {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 3em;
+  margin-right: 3em;
 
   font-size: 12px;
 }
