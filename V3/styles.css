@@ -6,15 +6,8 @@ Color palette generated at Coolors:
 https://coolors.co/ebf5ee-93b7be-bdd4e7-bfc0c0-8693ab
 
 UNUSED ELEMENTS:
-M3LO1: Reset stylesheets allow line height and other generic elements to be reset before loading the browser page. I have not found a use for them yet, since I have not messed with any of that.
-M3LO3: I am still working on this one. Clearing the float allows elements to float on either side of the element that is clearing it. clear: left; for instance allows something to float on the left but not the right.
-M3LO8A and M3LO8B: Absolute = Positioned relative to nearest ancestor, not the viewport. Relative = Positioned relative to its normal position. Other content won't be messed with.
-M3LO10: I don't have use for overflow, as there is not enough text on my website yet for that to be needed. This allows for text to be clipped or scrolled through or many other options.
-
-M4LO2: I have a banner, that could be seen as a background image, but I am not going to use one quite yet. I still have to find one that I like. I'm going to use it as decoration on the borders of the page.
-M4LO3: I don't want rounded corners. I am going to be using square shapes.
-M4LO5: Text shadowing takes the HTML text and repositions it and changes its color, to make it look like a shadow.
-M4LO7: I may have to use image maps in order for the icons of social media to be able to have like a blur effect when I hover over them. I'm not sure though...
+M5LO3: I am not fully understanding this and feel I need to do some more reading on responsive design before I can comfortably implement it.
+M5LO4: I DO plan on having one of these on the mobile website. I am going to create a pulldown navigation menu.
 */
 
 /* EXTERNAL FONTS LINKS */
@@ -24,7 +17,6 @@ M4LO7: I may have to use image maps in order for the icons of social media to be
 
 /* Basic Styling */
 body {
-  /*M4LO4: Gradient usage*/
   background: rgb(255,255,255);
   background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,241,255,0.25) 0%, rgba(255,255,255,0.75) 25%, rgba(255,255,255,0.75) 85%, rgba(0,241,255,0.25) 100%); /*M3LO11: -webkit- prefix for android and chrome*/
   background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(0,241,255,0.25) 0%, rgba(255,255,255,0.75) 25%, rgba(255,255,255,0.75) 85%, rgba(0,241,255,0.25) 100%);
@@ -70,14 +62,15 @@ h2 {
   font-family: "Noto Serif", serif;
 }
 
+/*M5LO5: Flexboxes do the majority of my organization for my website. I used a grid for the social media icons, but the flexboxes helped me easily create the layout for the main content of the page.*/
 .content-box {
   background: white;
 
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  align-items: center; /*M5LO6: I may be mistaking this for align-self but this determines how the items are aligned along the cross axis.*/
+  flex-direction: column; /*M5LO7: This changes the direction of the items in the flex container. Whether they be ina  column or row AND THEN whether they are in reverse order or forward order.*/
   justify-content: center;
-  width: 70em;
+  width: 55em;
 
   margin: auto;
 }
@@ -105,7 +98,7 @@ h2 {
 
 /* Content */
 .inner-content {
-  display: grid; /*M3LO6: Grid display. This organizes my content into a stacked grid on my page.*/
+  display: flex;
   grid-row-gap: 2em;
 }
 
@@ -114,15 +107,25 @@ h2 {
   text-align: center;
 }
 
-.social-icon { /*M4LO8: I am using a transformation here to keep all the icons the same size.*/
+.social-icon {
   padding: 2%;
   margin: 3%;
   width: 3em;
 }
 
-#spotify-tracks {
-  float: center; /*M3LO2: Floating element! This is floating center in the box. There is no text to be wrapped around it, otherwise the float would allow text to do that.*/
-  margin: 0;
+#spotify {
+  float: right;
+  padding-right: 2%;
+}
+
+#tours {
+  float: left;
+  padding-left: 2%;
+}
+
+table { /*M6LO7*/
+  border: 1px solid black;
+  width: 30em;
 }
 
 #box-1 {
@@ -130,8 +133,12 @@ h2 {
 }
 
 /* Footer Styling */
+#socials {
+  display: grid;
+}
+
 footer {
-  position: fixed; /*M3LO9: Fixed positioning. Allows the footer to stay stuck to the bottom of the screen. */
+  position: fixed;
   bottom: 0;
 
   display: flex;

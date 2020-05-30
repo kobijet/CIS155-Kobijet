@@ -1,0 +1,136 @@
+/*
+Author: Kobi Rogers
+Date: 4-28-20
+*/
+
+Color palette generated at Coolors:
+https://coolors.co/ebf5ee-93b7be-bdd4e7-bfc0c0-8693ab
+*/
+
+/* EXTERNAL FONTS LINKS */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+/* Basic Styling */
+body {
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.inner-content li {
+  margin: 2%;
+  list-style-type: circle;
+  font-size: 14px;
+  width: 60em;
+}
+
+a:hover {
+  color: white;
+}
+
+h1 {
+  margin: 0.5em;
+  text-align: center;
+
+  font-family: "Noto Serif", serif;
+}
+h2 {
+  font-size: 20px;
+  margin: 0.5em;
+  text-align: left;
+
+  font-family: "Noto Serif", serif;
+}
+
+.content-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+
+  margin: auto;
+}
+
+/* Heading and NAVBAR */
+#banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfc0c0;
+  width: 60em;
+  height: 2.5em;
+}
+
+.nav_link {
+  margin: 2.5em;
+}
+
+/* Content */
+.inner-content {
+  display: grid;
+  grid-row-gap: 2em;
+}
+
+.grid-item {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60em;
+}
+
+.feat-add {
+  background-color: #a6ffc2;
+}
+
+.feat-rmv {
+  background-color: #ff5252;
+}
+
+.feat-think {
+  background-color: #a6fffc;
+}
+
+/* Footer Styling */
+footer {
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60em;
+  height: 3em;
+  background-color: #bfc0c0;
+}
+
+footer p {
+  margin-left: 3em;
+  margin-right: 3em;
+
+  font-size: 12px;
+}
