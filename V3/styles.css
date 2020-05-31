@@ -124,8 +124,14 @@ h2 {
 }
 
 table { /*M6LO7*/
-  border: 1px solid black;
+  border: 2px solid black;
   width: 30em;
+}
+
+.tours-headers {
+  border: 0.5px solid black;
+  border-collapse: collapse;
+  font-weight: bold;
 }
 
 #box-1 {
