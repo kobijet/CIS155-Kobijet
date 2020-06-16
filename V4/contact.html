@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Author: Kobi Rogers
+Date: 4-29-20
+!-->
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Official website of the band OneSki.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kobi Rogers">
+
+    <link rel="stylesheet" href="about_styles.css">
+
+    <title>OneSki | Contact</title>
+  </head>
+
+
+  <body>
+<!-- Navbar !-->
+    <header>
+      <img src="assets/logo-banner.png" alt="OneSki's Banner" id="banner">
+
+      <nav>
+    		<ul class="navbar">
+    		  <li><a href="index.html" class="nav_link">home</a></li>
+    		  <li><a href="gallery.html" class="nav_link">gallery</a></li>
+    		  <li><a href="contact.html" class="nav_link">contact us</a></li>
+    		</ul>
+  	  </nav>
+    </header>
+
+    <div class="content-box">
+      <h1>contact us!</h1>
+
+      <p>Have something you'd like to see from us? Have a gig you want us to play? Do you just have something nice to say?</p>
+      <p>Fill out this form below and we will absolutely get back to you as soon as we possibly can!</p>
+
+      <br><br>
+
+      <form>
+        <label for="name">Full Name*</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email*</label><br>
+        <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br><br>
+        <label for="message">Message*</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="dogscats">Dogs or Cats?</label>
+        <select id="dogscats" name="dogscats">
+          <option value="dogs">Dogs</option>
+          <option value="cats">Cats</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+
+      <footer>
+        <p>OneSki, 2020</p>
+        <p><a href="about.html">About...</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
